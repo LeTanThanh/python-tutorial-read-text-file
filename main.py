@@ -138,3 +138,9 @@ if __name__ == "__main__":
   """
   This is more concise way to read a text file line by line.
   """
+
+  # Read UTF-8 text files
+
+  with open("quotes.txt", "r", encoding = "utf-8") as file:
+    for line in file:
+      print(line.strip())
