@@ -32,7 +32,9 @@ if __name__ == "__main__":
   The following table shows available modes for opening a text file:
 
   - r: Open for text file for reading text
+
   - w: Open a text file for writing text
+
   - a: Open a text file for appending text
 
   For example, to open a file whose name is the-zen-of-python.txt stored in the same folder as the program, you use the following code:
@@ -56,4 +58,30 @@ if __name__ == "__main__":
 
   - readlines(): read all lines of the text file into a list of strings.
   This method is useful if you have a small file and you want to manipulate the whole text of that file.
+  """
+
+  # close() method
+
+  """
+  The file that you open will remain open until it close it using the close() method.
+
+  It's important to close the file that is no longer in use for the following reasons:
+
+  - First, when you open a file in your script, the file system usually locks it down so no other programs or scripts can use it until you close it.
+
+  - Second, your file system has a limited number of file descriptors that you can create before it runs out them.
+  Although this number might be high, it's possible to open a lot of files and deplete your system resources.
+
+  - Third, leaving many files open may lead to race conditions which occur when multiple process attempt to modify one file at the same time and can cause all kinds of unpected behaviors.
+
+  The following shows how to call the close() method to close the file:
+
+  f.close()
+
+  To close the file automatically without calling the close() method, you use the with statement like this:
+
+  with open(path_to_file) as f:
+    contents = f.readlines()
+
+  In practice, you'll use the with statement to close the file automatically.
   """
