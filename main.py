@@ -123,3 +123,18 @@ if __name__ == "__main__":
       if not line:
         break
       print(line.strip())
+
+  # A more concise way to read a text file line by line
+
+  """
+  The open() function returns a file object which is an iterable object.
+  Therefore, you can use a for loop to iterate over the lines of a text file as follows:
+  """
+
+  with open("the-zen-of-python.txt", "r") as file:
+    for line in file:
+      print(line.strip())
+
+  """
+  This is more concise way to read a text file line by line.
+  """
