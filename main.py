@@ -85,3 +85,41 @@ if __name__ == "__main__":
 
   In practice, you'll use the with statement to close the file automatically.
   """
+
+  # Reading a text file examples
+
+  """
+  We'll use the-zon-of-python.txt file for the demonstration.
+
+  The following example illustrates how to use the read() method to read all the contents of the the-zen-of-python.txt file into a string
+  """
+
+  with open("the-zen-of-python.txt", "r") as file:
+    contents = file.read()
+    print(contents)
+
+  """
+  The following example uses the readlines() method to read the text file and returns the file contents as a list of strings:
+  """
+
+  with open("the-zen-of-python.txt", "r") as file:
+    [print(line) for line in file.readlines()]
+
+  """
+  The reason you see a blank line after each line from a file is that each line in the text file has a newline character(\n).
+  To remove the blank line, you can use the strip() method. For example:
+  """
+
+  with open("the-zen-of-python.txt", "r") as file:
+    [print(line.strip()) for line in file.readlines()]
+
+  """
+  The following examples shows how to use the readline() to read the text file line by line:
+  """
+
+  with open("the-zen-of-python.txt", "r") as file:
+    while True:
+      line = file.readline()
+      if not line:
+        break
+      print(line.strip())
