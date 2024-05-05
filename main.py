@@ -41,3 +41,19 @@ if __name__ == "__main__":
 
   The open() function returns a file object which you will use to read text from a text file.
   """
+
+  # Reading text methods
+
+  """
+  The file object provides you with three methods for reading text from a text file:
+
+  - read(size): read some contents of a file base on the optional size and return the contents as a string.
+  If you omit the size, the read() method reads from where it left off till the end of the file.
+  If the end of a file has been reached, the read() method returns an empty string.
+
+  - readline(): read a single line from a text file and return the line as a string.
+  If the end of a file has been reached, the readline() returns an empty string.
+
+  - readlines(): read all lines of the text file into a list of strings.
+  This method is useful if you have a small file and you want to manipulate the whole text of that file.
+  """
